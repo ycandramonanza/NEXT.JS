@@ -36,7 +36,7 @@ export default async function ProductList() {
                 <td>{product.title}</td>
                 <td>{product.price}</td>
                 <td>
-                  <UpdateProcuct {}/>
+                  <UpdateProcuct {...product}/>
                   <DeleteProduct {...product}/>
                 </td>
             </tr>
