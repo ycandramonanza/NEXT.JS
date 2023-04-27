@@ -1,12 +1,6 @@
 "use client";
 import { SyntheticEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-
-type Product = {
-    id: number;
-    title: string;
-    price: number;
-  };
   
 export default function AddProcuct() {
   const [title, setTitle] = useState("");
@@ -15,13 +9,10 @@ export default function AddProcuct() {
   const [isMutating, setIsMutating] = useState(false);
   const router = useRouter();
 
-  async function handleSubmit(e: SyntheticEvent, product: Product) {
+  async function handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
     setIsMutating(true);
-console.log(price);
-console.log(product.price);
 
-    confirm('out');
     await fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
