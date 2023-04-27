@@ -19,7 +19,7 @@ export default function UpdateProcuct(product: Product) {
     e.preventDefault();
     setIsMutating(true);
 
-    await fetch(`http://localhost:5000/products/${product.id}`, {
+    await fetch(`https://3baa-103-133-70-181.ngrok-free.app/products/${product.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

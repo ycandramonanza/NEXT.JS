@@ -17,7 +17,7 @@ export default function DeleteProcuct(product: Product) {
   async function handleDelete(productId: number) {
     setIsMutating(true);
 
-    await fetch(`http://localhost:5000/products/${productId}`, {
+    await fetch(`https://3baa-103-133-70-181.ngrok-free.app/products/${productId}`, {
       method: "DELETE",
     });
 

@@ -13,7 +13,7 @@ export default function AddProcuct() {
     e.preventDefault();
     setIsMutating(true);
 
-    await fetch("http://localhost:5000/products", {
+    await fetch("https://3baa-103-133-70-181.ngrok-free.app/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

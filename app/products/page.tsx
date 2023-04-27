@@ -9,7 +9,7 @@ type Product = {
 }
 
 async function getProducts() {
-  const res = await fetch('http://localhost:5000/products', {cache: 'no-store'});
+  const res = await fetch('https://3baa-103-133-70-181.ngrok-free.app/products', {cache: 'no-store'});
   return res.json();
 }
 
@@ -35,8 +35,8 @@ export default async function ProductList() {
                 <td>{index+1}</td>
                 <td>{product.title}</td>
                 <td>{product.price}</td>
-                <td className="flex">
-                  <UpdateProcuct {...product}/>
+                <td>
+                  <UpdateProcuct {}/>
                   <DeleteProduct {...product}/>
                 </td>
             </tr>
